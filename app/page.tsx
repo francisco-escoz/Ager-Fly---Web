@@ -34,7 +34,7 @@ export default function Component() {
         <div className="absolute inset-0">
           <Image
             src="/images/principal.png"
-            alt="CONDOR C80 en campo agrícola"
+            alt="CONDOR C80 en campo de soja"
             fill
             priority
             className="object-cover origin-center max-md:scale-[1.18] max-md:translate-y-[-40px]"
@@ -148,7 +148,6 @@ export default function Component() {
                   fill
                   className="object-contain object-center opacity-50 blur-[1px]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
-                  priority
                 />
 
               </div>
@@ -174,7 +173,6 @@ export default function Component() {
                         fill
                         className="object-contain object-center opacity-50 blur-[1px]"
                         sizes="(max-width: 1024px) 100vw, 50vw"
-                        priority
                       />
 
 
@@ -225,12 +223,12 @@ export default function Component() {
             {/* Fondo en mobile (misma imagen) */}
             <div className="absolute inset-0 lg:hidden">
               <Image
-  src="/images/aspersion.png"
-  alt="Sistema de pulverización CONDOR C80"
-  fill
-  sizes="(max-width: 1024px) 100vw, 50vw"
-  className="object-cover opacity-40"
-/>
+                src="/images/aspersion.png"
+                alt="Sistema de pulverización CONDOR C80"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover opacity-40"
+              />
 
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/40 to-slate-900/20" />
 
@@ -261,12 +259,12 @@ export default function Component() {
                 <div className="hidden lg:block">
                   <div className="relative w-full min-h-[420px] rounded-2xl overflow-hidden ">
                     <Image
-  src="/images/aspersion.png"
-  alt="Sistema de pulverización CONDOR C80"
-  fill
-  sizes="(max-width: 1024px) 100vw, 50vw"
-  className="object-cover opacity-40"
-/>
+                      src="/images/aspersion.png"
+                      alt="Sistema de pulverización CONDOR C80"
+                      fill
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover opacity-40"
+                    />
 
 
                   </div>
