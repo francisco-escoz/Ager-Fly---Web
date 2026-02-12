@@ -16,12 +16,13 @@ export default function Footer() {
                 >
                   <div className="relative w-[150px] h-[100px]">
                     <Image
-                      src="/images/logoblanco-notagline-2.png"
-                      alt="Logo Ager Fly"
-                      fill
-                      priority
-                      className="object-contain"
-                    />
+  src="/images/logoblanco-notagline-2.png"
+  alt="Logo AgerFly"
+  fill
+  sizes="(max-width: 768px) 180px, 240px"
+  className="object-contain"
+/>
+
                   </div>
                 </Link>
               </div>

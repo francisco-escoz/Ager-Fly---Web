@@ -88,8 +88,10 @@ export default function Component() {
                 src="/images/carga.png"
                 alt="Capacidad de carga CONDOR C80"
                 fill
+                sizes="100vw"
                 className="object-cover opacity-60"
               />
+
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/40 to-slate-900/20" />
 
             </div>
@@ -124,8 +126,11 @@ export default function Component() {
                       src="/images/carga.png"
                       alt="Capacidad de carga CONDOR C80"
                       fill
-                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 50vw"
+                      className="object-cover opacity-60"
                     />
+
+
                   </div>
                 </div>
               </div>
@@ -142,9 +147,10 @@ export default function Component() {
                   alt="Personalización e integración CONDOR C80"
                   fill
                   className="object-contain object-center opacity-50 blur-[1px]"
-                  sizes="100vw"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
                   priority
                 />
+
               </div>
 
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/55 to-slate-950/25" />
@@ -163,14 +169,15 @@ export default function Component() {
                     {/* Imagen sin recorte */}
                     <div className="absolute inset-0 p-6 xl:p-8">
                       <Image
-                        src="/images/modularizacion.png"
+                        src="/images/modularizacion2.png"
                         alt="Personalización e integración CONDOR C80"
                         fill
-                        className="object-contain object-center opacity-70 drop-shadow-[0_20px_40px_rgba(0,0,0,0.55)]"
-                        sizes="(min-width: 1024px) 50vw, 100vw"
-                        quality={100}
+                        className="object-contain object-center opacity-50 blur-[1px]"
+                        sizes="(max-width: 1024px) 100vw, 50vw"
                         priority
                       />
+
+
                     </div>
 
                     {/* Viñeta para integrarla */}
@@ -218,11 +225,13 @@ export default function Component() {
             {/* Fondo en mobile (misma imagen) */}
             <div className="absolute inset-0 lg:hidden">
               <Image
-                src="/images/aspersion.png"
-                alt="Sistema de pulverización CONDOR C80"
-                fill
-                className="object-cover opacity-40"
-              />
+  src="/images/aspersion.png"
+  alt="Sistema de pulverización CONDOR C80"
+  fill
+  sizes="(max-width: 1024px) 100vw, 50vw"
+  className="object-cover opacity-40"
+/>
+
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/40 to-slate-900/20" />
 
             </div>
@@ -252,11 +261,13 @@ export default function Component() {
                 <div className="hidden lg:block">
                   <div className="relative w-full min-h-[420px] rounded-2xl overflow-hidden ">
                     <Image
-                      src="/images/aspersion.png"
-                      alt="Sistema de pulverización CONDOR C80"
-                      fill
-                      className="object-cover object-[50%_40%]"
-                    />
+  src="/images/aspersion.png"
+  alt="Sistema de pulverización CONDOR C80"
+  fill
+  sizes="(max-width: 1024px) 100vw, 50vw"
+  className="object-cover opacity-40"
+/>
+
 
                   </div>
                 </div>
