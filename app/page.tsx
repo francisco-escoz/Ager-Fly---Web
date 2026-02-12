@@ -697,11 +697,11 @@ export default function Component() {
 
 
       {/* CONTACTO / COTIZACIÓN */}
-      <section className="py-24 bg-slate-950" id="contacto">
+      <section className="py-16 md:py-24 bg-slate-950" id="contacto">
         <div className="max-w-6xl mx-auto px-6">
           {/* Header */}
-          <div className="text-center mb-16 max-w-4xl mx-auto">
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">
+          <div className="text-center mb-10 md:mb-16 max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4 md:mb-6">
               Contacto
             </h2>
             <p className="text-base md:text-lg text-slate-300 leading-7">
@@ -709,9 +709,9 @@ export default function Component() {
             </p>
           </div>
 
-          {/* Card grande (mismo ancho que el otro diseño) */}
-          <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-10 md:p-14 text-center">
-            <p className="text-slate-300 text-lg mb-10 max-w-3xl mx-auto">
+          {/* Card */}
+          <div className="rounded-2xl bg-slate-900/60 border border-slate-800 p-6 sm:p-8 md:p-14 text-center">
+            <p className="text-slate-300 text-base sm:text-lg mb-8 md:mb-10 max-w-3xl mx-auto">
               Nuestro equipo analiza cada solicitud de forma personalizada para
               ofrecerte la mejor solución según tus necesidades operativas.
             </p>
@@ -720,24 +720,27 @@ export default function Component() {
               asChild
               size="lg"
               className="
-    bg-blue-600 hover:bg-blue-700
-    text-white
-    px-10 py-5
-    text-lg font-semibold
-    rounded-xl
-    transition-all duration-300
-    transform hover:scale-105
-    shadow-[0_0_30px_rgba(59,130,246,0.3)]
-  "
+          w-full sm:w-auto
+          justify-center
+          bg-blue-600 hover:bg-blue-700
+          text-white
+          px-6 sm:px-10 py-5
+          text-base sm:text-lg font-semibold
+          rounded-xl
+          transition-all duration-300
+          sm:transform sm:hover:scale-105
+          shadow-[0_0_30px_rgba(59,130,246,0.3)]
+          whitespace-normal text-center
+        "
             >
-              <Link href="/contacto">
+              <Link href="/contacto" className="w-full sm:w-auto">
                 Contactar con un especialista
               </Link>
             </Button>
-
           </div>
         </div>
       </section>
+
 
 
       {/* Footer */}

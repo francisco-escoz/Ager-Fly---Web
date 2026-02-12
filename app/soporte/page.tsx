@@ -178,48 +178,60 @@ export default function Soporte() {
         </section>
 
         {/* ================= CONTACTO (MISMO FORMATO QUE INDEX) ================= */}
-        <section className="pb-28 px-6 bg-[#020617]">
-          <div className="max-w-6xl mx-auto">
-            {/* Título + bajada centrados */}
-            <div className="text-center max-w-4xl mx-auto mb-12">
-              <h2 className="text-4xl md:text-5xl font-bold mb-5">
-                Contacto
-              </h2>
+<section className="pb-24 px-6 bg-[#020617]">
+  <div className="max-w-6xl mx-auto">
 
-              <p className="text-slate-300 text-base md:text-lg leading-7">
-                Consultas técnicas, información comercial o solicitud de capacitación.
-                Todo comienza desde un mismo formulario.
-              </p>
-            </div>
+    {/* Título + bajada */}
+    <div className="text-center max-w-4xl mx-auto mb-10 md:mb-12">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-5">
+        Contacto
+      </h2>
 
-            {/* Card grande centrada */}
-            <div className="rounded-2xl border border-blue-500/20 bg-white/5 px-8 py-12 md:px-14 md:py-14 text-center">
-              <p className="text-slate-300 text-lg mb-10">
-                Nuestro equipo analiza cada solicitud de forma personalizada para ofrecerte
-                la mejor solución según tus necesidades operativas.
-              </p>
+      <p className="text-base sm:text-lg text-slate-300 leading-7">
+        Consultas técnicas, información comercial o solicitud de capacitación.
+        Todo comienza desde un mismo formulario.
+      </p>
+    </div>
 
-              <Button
-                asChild
-                size="lg"
-                className="
-    bg-blue-600 hover:bg-blue-700
-    text-white
-    px-10 py-5
-    text-lg font-semibold
-    rounded-xl
-    transition-all duration-300
-    transform hover:scale-105
-    shadow-[0_0_30px_rgba(59,130,246,0.3)]
-  "
-              >
-                <Link href="/contacto">
-                  Contactar con un especialista
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+    {/* Card */}
+    <div className="rounded-2xl border border-blue-500/20 bg-white/5 
+                    px-6 py-10 
+                    sm:px-8 sm:py-12 
+                    md:px-14 md:py-14 
+                    text-center">
+
+      <p className="text-slate-300 text-base sm:text-lg mb-8 sm:mb-10 max-w-3xl mx-auto">
+        Nuestro equipo analiza cada solicitud de forma personalizada para ofrecerte
+        la mejor solución según tus necesidades operativas.
+      </p>
+
+      <Button
+        asChild
+        size="lg"
+        className="
+          w-full sm:w-auto
+          bg-blue-600 hover:bg-blue-700
+          text-white
+          px-6 sm:px-10
+          py-5
+          text-base sm:text-lg
+          font-semibold
+          rounded-xl
+          transition-all duration-300
+          sm:transform sm:hover:scale-105
+          shadow-[0_0_30px_rgba(59,130,246,0.3)]
+          whitespace-normal
+        "
+      >
+        <Link href="/contacto" className="block text-center">
+          Contactar con un especialista
+        </Link>
+      </Button>
+
+    </div>
+  </div>
+</section>
+
 
       </main>
 
