@@ -16,7 +16,7 @@ import { Menu } from "lucide-react";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 const links = [
-  { href: "/", label: "Condor C80" },
+  { href: "/", label: "Cóndor C80" },
   // { href: "/repuestos", label: "Repuestos" },
   { href: "/soporte", label: "Soporte" },
   { href: "/nosotros", label: "Nosotros" },

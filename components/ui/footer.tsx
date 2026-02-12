@@ -133,7 +133,7 @@ export default function Footer() {
               {/* Si tenés una sección con id="condor-80" en la home, esto va perfecto */}
               <li>
                 <Link href="/#condor-80" className="hover:text-blue-400">
-                  Condor C80
+                  Cóndor C80
                 </Link>
               </li>
 

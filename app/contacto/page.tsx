@@ -112,7 +112,7 @@ export default function Contacto() {
                       rel="noopener noreferrer"
                       className="block text-center"
                     >
-                      Contactanos
+                      Contáctanos
                     </a>
                   </Button>
                 </div>

@@ -86,9 +86,9 @@ export default function Nosotros() {
                   Nuestra Visión
                 </h3>
                 <p className="text-gray-400 leading-relaxed text-justify">
-                  Convertirse en una empresa referente en el desarrollo de drones
+                  Convertirnos en una empresa referente en el desarrollo de drones
                   para la agricultura y la industria, impulsando la innovación
-                  tecnológica aeronáutica desde Argentina hacia la región.
+                  tecnológica aeronáutica en Argentina.
                 </p>
               </div>
 
@@ -112,7 +112,7 @@ export default function Nosotros() {
                   </li>
                   <li className="flex items-center gap-2">
                     <div className="h-1 w-1 bg-blue-500 rounded-full" />
-                    Diseño y integración 100% nacional
+                    Diseño e integración 100% nacional
                   </li>
                 </ul>
               </div>
@@ -161,7 +161,7 @@ export default function Nosotros() {
                       Formación Continua:
                     </strong>{" "}
                     Capacitar a los operarios para que extraigan el
-                    máximo potencial del Condor C80 de forma segura.
+                    máximo potencial del Cóndor C80 de forma segura.
                   </p>
                 </div>
                 <div className="flex gap-6 p-6">
@@ -192,7 +192,7 @@ export default function Nosotros() {
 
               <p className="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">
                 Un equipo multidisciplinario enfocado en ingeniería, software y
-                soporte técnico local, comprometido con la innovación tecnoógica en Argentina.
+                soporte técnico local, comprometido con la innovación tecnológica en Argentina.
               </p>
             </div>
 

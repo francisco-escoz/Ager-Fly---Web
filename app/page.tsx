@@ -34,7 +34,7 @@ export default function Component() {
         <div className="absolute inset-0">
           <Image
             src="/images/principal.png"
-            alt="CONDOR C80 en campo de soja"
+            alt="CÓNDOR C80 en campo de soja"
             fill
             priority
             className="object-cover origin-center max-md:scale-[1.18] max-md:translate-y-[-40px]"
@@ -47,7 +47,7 @@ export default function Component() {
           {/* TÍTULO */}
           <div className="absolute top-[12%] left-1/2 -translate-x-1/2 text-center px-4 w-full">
             <h1 className="whitespace-nowrap font-bold tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
-              CONDOR C80
+              CÓNDOR C80
             </h1>
           </div>
 
@@ -74,7 +74,7 @@ export default function Component() {
           <div className="text-center mb-10">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Construido para la Excelencia Agrícola</h2>
             <p className="text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
-              El CONDOR C80 representa la cúspide de la tecnología de drones agrícolas, combinando sistemas avanzados de
+              El CÓNDOR C80 representa la cúspide de la tecnología de drones agrícolas, combinando sistemas avanzados de
               pulverización, capacidades de vuelo inteligentes y construcción robusta para revolucionar las operaciones
               agrícolas modernas.
             </p>
@@ -86,7 +86,7 @@ export default function Component() {
             <div className="absolute inset-0 lg:hidden">
               <Image
                 src="/images/carga.png"
-                alt="Capacidad de carga CONDOR C80"
+                alt="Capacidad de carga CÓNDOR C80"
                 fill
                 sizes="100vw"
                 className="object-cover opacity-60"
@@ -108,12 +108,18 @@ export default function Component() {
                   </p>
 
                   <div className="grid grid-cols-2 gap-6">
-                    <div className="bg-slate-900/40 border border-blue-500/20 p-6 rounded-lg backdrop-blur">
-                      <div className="text-4xl font-bold text-yellow-500 mb-2">80 L</div>
+                    <div className="bg-slate-900/40 border border-blue-500/20 p-4 rounded-lg backdrop-blur">
+                      <div className="text-4xl md:text-4xl font-bold text-yellow-500 mb-2">
+                        80 L
+                      </div>
+
                       <div className="text-slate-300">Carga de Pulverización</div>
                     </div>
-                    <div className="bg-slate-900/40 border border-blue-500/20 p-6 rounded-lg backdrop-blur">
-                      <div className="text-4xl font-bold text-yellow-500 mb-2">85 kg</div>
+                    <div className="bg-slate-900/40 border border-blue-500/20 p-4 rounded-lg backdrop-blur">
+                      <div className="text-4xl md:text-4xl font-bold text-yellow-500 mb-2">
+                        85 kg
+                      </div>
+
                       <div className="text-slate-300">Carga de Esparcimiento</div>
                     </div>
                   </div>
@@ -124,7 +130,7 @@ export default function Component() {
                   <div className="relative w-full min-h-[420px] rounded-2xl overflow-hidden border border-slate-700">
                     <Image
                       src="/images/carga.png"
-                      alt="Capacidad de carga CONDOR C80"
+                      alt="Capacidad de carga CÓNDOR C80"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover opacity-60"
@@ -144,7 +150,7 @@ export default function Component() {
               <div className="relative w-full h-full min-h-[420px]">
                 <Image
                   src="/images/modularizacion2.png"
-                  alt="Personalización e integración CONDOR C80"
+                  alt="Personalización e integración CÓNDOR C80"
                   fill
                   className="object-contain object-center opacity-50 blur-[1px]"
                   sizes="(max-width: 1024px) 100vw, 50vw"
@@ -169,7 +175,7 @@ export default function Component() {
                     <div className="absolute inset-0 p-6 xl:p-8">
                       <Image
                         src="/images/modularizacion2.png"
-                        alt="Personalización e integración CONDOR C80"
+                        alt="Personalización e integración CÓNDOR C80"
                         fill
                         className="object-contain object-center opacity-50 blur-[1px]"
                         sizes="(max-width: 1024px) 100vw, 50vw"
@@ -190,7 +196,7 @@ export default function Component() {
                   </h3>
 
                   <p className="text-lg text-slate-300 mb-8 leading-relaxed text-justify mr-6">
-                    El CONDOR C80 está preparado para integrar módulos adicionales según tu operación: sensores,
+                    El CÓNDOR C80 está preparado para integrar módulos adicionales según tu operación: sensores,
                     actuadores, telemetría o accesorios especiales. Nuestro sistema permite comunicación directa
                     con equipos externos mediante interfaces estándar.
                   </p>
@@ -224,7 +230,7 @@ export default function Component() {
             <div className="absolute inset-0 lg:hidden">
               <Image
                 src="/images/aspersion.png"
-                alt="Sistema de pulverización CONDOR C80"
+                alt="Sistema de pulverización CÓNDOR C80"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
                 className="object-cover opacity-40"
@@ -260,7 +266,7 @@ export default function Component() {
                   <div className="relative w-full min-h-[420px] rounded-2xl overflow-hidden ">
                     <Image
                       src="/images/aspersion.png"
-                      alt="Sistema de pulverización CONDOR C80"
+                      alt="Sistema de pulverización CÓNDOR C80"
                       fill
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       className="object-cover opacity-40"
@@ -593,7 +599,7 @@ export default function Component() {
                         <span className="text-white">Generador inverter</span>
                       </div>
                       <div className="flex justify-between">
-                        <span className="text-slate-400">tipo de Combustible</span>
+                        <span className="text-slate-400">Tipo de Combustible</span>
                         <span className="text-white">Nafta / GLP / Gas</span>
                       </div>
                       <div className="flex justify-between">
@@ -635,7 +641,7 @@ export default function Component() {
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-white mb-6">Aplicaciones Versátiles</h2>
             <p className="text-xl text-slate-300 max-w-3xl mx-auto">
-              Desde pulverización de precisión hasta operaciones de esparcimiento, el CONDOR C80 se adapta a diversas
+              Desde pulverización de precisión hasta operaciones de esparcimiento, el CÓNDOR C80 se adapta a diversas
               necesidades agrícolas con versatilidad incomparable.
             </p>
           </div>
@@ -673,7 +679,7 @@ export default function Component() {
                 </div>
                 <h3 className="text-xl font-semibold mb-4 text-white">Levantamiento de Carga</h3>
                 <p className="text-slate-300 text-sm">
-                  Transporte aéreo de insumos y cargas adecuandose a las necesidades del cliente.
+                  Transporte aéreo de insumos y cargas adecuándose a las necesidades del cliente.
                 </p>
               </CardContent>
             </Card>

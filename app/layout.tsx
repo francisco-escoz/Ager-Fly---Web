@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   },
 
   description:
-    "Ager Fly diseña drones agrícolas profesionales para pulverización y operaciones de precisión. CONDOR C80: alto rendimiento, eficiencia operativa y tecnología de vuelo inteligente.",
+    "Ager Fly diseña drones agrícolas profesionales para pulverización y operaciones de precisión. CÓNDOR C80: alto rendimiento, eficiencia operativa y tecnología de vuelo inteligente.",
 
   keywords: [
     "dron agrícola",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     "pulverización agrícola",
     "agricultura de precisión",
     "drones para el agro",
-    "CONDOR C80",
+    "CÓNDOR C80",
     "Ager Fly",
     "Argentina",
   ],
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "Ager Fly | CONDOR C80",
+    title: "Ager Fly | CÓNDOR C80",
     description:
       "Dron agrícola de alto rendimiento con sistema de pulverización avanzada, máxima eficiencia y tecnología de vuelo inteligente.",
     url: "https://www.agerfly.com/",
@@ -69,7 +69,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "Ager Fly | CONDOR C80",
+    title: "Ager Fly | CÓNDOR C80",
     description:
       "Dron agrícola profesional con tecnología avanzada de pulverización y máxima eficiencia operativa.",
     images: ["/images/LogoRedes.png"],
