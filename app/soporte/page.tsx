@@ -10,72 +10,72 @@ export default function Soporte() {
 
       <main className="flex-1">
         {/* ================= HERO ================= */}
-<section className="relative overflow-hidden">
-  {/* 1) Fondo REAL (en el flujo) -> define la altura */}
-  <div className="relative">
-    {/* Desktop/Tablet: 3 columnas */}
-    <div className="hidden md:grid grid-cols-3 gap-x-10 px-10 lg:gap-x-16 lg:px-16 py-10 md:py-12">
-      <div className="flex items-center justify-center">
-        <img
-          src="/images/plano3.png"
-          alt=""
-          className="w-full max-w-[520px] h-auto object-contain opacity-80"
-        />
-      </div>
-      <div className="flex items-center justify-center">
-        <img
-          src="/images/plano1.png"
-          alt=""
-          className="w-full max-w-[520px] h-auto object-contain opacity-80"
-        />
-      </div>
-      <div className="flex items-center justify-center">
-        <img
-          src="/images/plano2.png"
-          alt=""
-          className="w-full max-w-[520px] h-auto object-contain opacity-80 scale-[0.7]"
-        />
-      </div>
-    </div>
+        <section className="relative overflow-hidden">
+          {/* 1) Fondo REAL (en el flujo) -> define la altura */}
+          <div className="relative">
+            {/* Desktop/Tablet: 3 columnas */}
+            <div className="hidden md:grid grid-cols-3 gap-x-10 px-10 lg:gap-x-16 lg:px-16 py-10 md:py-12">
+              <div className="flex items-center justify-center">
+                <img
+                  src="/images/plano3.png"
+                  alt="Foto de plano del dron"
+                  className="w-full max-w-[520px] h-auto object-contain opacity-80"
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  src="/images/plano1.png"
+                  alt="Foto de plano del dron"
+                  className="w-full max-w-[520px] h-auto object-contain opacity-80"
+                />
+              </div>
+              <div className="flex items-center justify-center">
+                <img
+                  src="/images/plano2.png"
+                  alt="Foto de plano del dron"
+                  className="w-full max-w-[520px] h-auto object-contain opacity-80 scale-[0.7]"
+                />
+              </div>
+            </div>
 
-{/* Mobile: 3 imágenes chicas, una debajo de la otra */}
-<div className="md:hidden flex flex-col items-center gap-y-12 px-6 pt-10 pb-6">
-  <img
-    src="/images/plano3.png"
-    alt=""
-    className="w-full max-w-[200px] h-auto object-contain opacity-70"
-  />
+            {/* Mobile: 3 imágenes chicas, una debajo de la otra */}
+            <div className="md:hidden flex flex-col items-center gap-y-12 px-6 pt-10 pb-6">
+              <img
+                src="/images/plano3.png"
+                alt=""
+                className="w-full max-w-[200px] h-auto object-contain opacity-70"
+              />
 
-  <img
-    src="/images/plano1.png"
-    alt=""
-    className="w-full max-w-[200px] h-auto object-contain opacity-70"
-  />
+              <img
+                src="/images/plano1.png"
+                alt=""
+                className="w-full max-w-[200px] h-auto object-contain opacity-70"
+              />
 
-  <img
-    src="/images/plano2.png"
-    alt=""
-    className="w-full max-w-[200px] h-auto object-contain opacity-70 scale-[0.8]"
-  />
-</div>
+              <img
+                src="/images/plano2.png"
+                alt=""
+                className="w-full max-w-[200px] h-auto object-contain opacity-70 scale-[0.8]"
+              />
+            </div>
 
 
-    {/* 2) Overlay encima del fondo */}
-    <div className="absolute inset-0 bg-black/70 pointer-events-none" />
+            {/* 2) Overlay encima del fondo */}
+            <div className="absolute inset-0 bg-black/70 pointer-events-none" />
 
-    {/* 3) Texto encima (hero real) */}
-    <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
-      <div className="max-w-4xl">
-        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Soporte</h1>
-        <p className="text-slate-300 text-lg leading-relaxed">
-          Acompañamiento técnico integral antes, durante y después de cada operación.
-          Nuestro objetivo es que cada equipo funcione con la máxima eficiencia,
-          seguridad y confiabilidad.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+            {/* 3) Texto encima (hero real) */}
+            <div className="absolute inset-0 z-10 flex items-center justify-center px-6 text-center">
+              <div className="max-w-4xl">
+                <h1 className="text-4xl md:text-5xl font-bold mb-6 text-white">Soporte</h1>
+                <p className="text-slate-300 text-lg leading-relaxed">
+                  Acompañamiento técnico integral antes, durante y después de cada operación.
+                  Nuestro objetivo es que cada equipo funcione con la máxima eficiencia,
+                  seguridad y confiabilidad.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
 
 
         {/* ================= SERVICIO TECNICO ================= */}

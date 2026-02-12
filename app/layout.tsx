@@ -18,14 +18,14 @@ export const metadata: Metadata = {
     title: "AgerFly | CONDOR C80",
     description:
       "Tecnología avanzada de pulverización agrícola y máxima eficiencia operativa.",
-    url: "https://agerfly.com",
+    url: "https://www.agerfly.com",
     siteName: "AgerFly",
     images: [
       {
-        url: "https://agerfly.com/images/principal.png",
+        url: "https://www.agerfly.com/images/logoblanco-notagline-2.png",
         width: 1200,
         height: 630,
-        alt: "CONDOR C80 Dron Agrícola",
+        alt: "AgerFly Logo",
       },
     ],
     locale: "es_AR",
@@ -36,8 +36,9 @@ export const metadata: Metadata = {
     title: "AgerFly | CONDOR C80",
     description:
       "Dron agrícola profesional con tecnología avanzada de pulverización.",
-    images: ["https://agerfly.com/images/principal.png"],
+    images: ["https://www.agerfly.com/images/logoblanco-notagline-2.png"],
   },
+
 };
 
 export default function RootLayout({
