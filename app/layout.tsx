@@ -46,12 +46,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      // Opcional si lo agregás en /public:
-      // { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      // { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
     ],
-    // Opcional si lo agregás en /public:
-    // apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 
   openGraph: {
@@ -80,11 +75,6 @@ export const metadata: Metadata = {
     images: ["/images/logo-redes.png"],
   },
 
-  // ✅ Si tenés el archivo de verificación (googleXXXX.html) en /public
-  // o si querés verificación por meta tag, descomentá:
-  // verification: {
-  //   google: "TU_CODIGO_DE_GOOGLE_SEARCH_CONSOLE",
-  // },
 };
 
 export default function RootLayout({

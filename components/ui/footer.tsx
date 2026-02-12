@@ -106,7 +106,7 @@ export default function Footer() {
 
               {/* YouTube */}
               <a
-                href="https://www.youtube.com/@Ager Fly"
+                href="https://www.youtube.com/@AgerFly"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="YouTube"
@@ -130,9 +130,9 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-lg mb-6 text-blue-400">Productos</h4>
             <ul className="space-y-3 text-slate-400">
-              {/* Si tenés una sección con id="condor-50" en la home, esto va perfecto */}
+              {/* Si tenés una sección con id="condor-80" en la home, esto va perfecto */}
               <li>
-                <Link href="/#condor-50" className="hover:text-blue-400">
+                <Link href="/#condor-80" className="hover:text-blue-400">
                   Condor C80
                 </Link>
               </li>

@@ -14,7 +14,7 @@ export default function Nosotros() {
       foto: "/images/socios/matias.png",
     },
     {
-      nombre: "Sr. Francisco Escoz",
+      nombre: "Ing. Francisco Escoz",
       rol: "Cofundador",
       puesto: "Desarrollo de software",
       foto: "/images/socios/francisco.png",
@@ -22,7 +22,7 @@ export default function Nosotros() {
     {
       nombre: "Ing. José Escoz",
       rol: "Cofundador",
-      puesto: "Integración y control",
+      puesto: "Socio Gerente. Integración y control",
       foto: "/images/socios/jose.png",
     },
     {
