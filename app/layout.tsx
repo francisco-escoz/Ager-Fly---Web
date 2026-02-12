@@ -5,12 +5,12 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.agerfly.com"),
 
   title: {
-    default: "AgerFly | Drones agrícolas profesionales",
-    template: "%s | AgerFly",
+    default: "Ager Fly | Drones agrícolas profesionales",
+    template: "%s | Ager Fly",
   },
 
   description:
-    "AgerFly diseña drones agrícolas profesionales para pulverización y operaciones de precisión. CONDOR C80: alto rendimiento, eficiencia operativa y tecnología de vuelo inteligente.",
+    "Ager Fly diseña drones agrícolas profesionales para pulverización y operaciones de precisión. CONDOR C80: alto rendimiento, eficiencia operativa y tecnología de vuelo inteligente.",
 
   keywords: [
     "dron agrícola",
@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     "agricultura de precisión",
     "drones para el agro",
     "CONDOR C80",
-    "AgerFly",
+    "Ager Fly",
     "Argentina",
   ],
 
-  authors: [{ name: "AgerFly" }],
-  creator: "AgerFly",
-  publisher: "AgerFly",
+  authors: [{ name: "Ager Fly" }],
+  creator: "Ager Fly",
+  publisher: "Ager Fly",
 
   alternates: {
     canonical: "https://www.agerfly.com/",
@@ -50,11 +50,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "AgerFly | CONDOR C80",
+    title: "Ager Fly | CONDOR C80",
     description:
       "Dron agrícola de alto rendimiento con sistema de pulverización avanzada, máxima eficiencia y tecnología de vuelo inteligente.",
     url: "https://www.agerfly.com/",
-    siteName: "AgerFly",
+    siteName: "Ager Fly",
     locale: "es_AR",
     type: "website",
     images: [
@@ -62,14 +62,14 @@ export const metadata: Metadata = {
         url: "/images/LogoRedes.png",
         width: 1200,
         height: 630,
-        alt: "AgerFly - Drones agrícolas profesionales",
+        alt: "Ager Fly - Drones agrícolas profesionales",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "AgerFly | CONDOR C80",
+    title: "Ager Fly | CONDOR C80",
     description:
       "Dron agrícola profesional con tecnología avanzada de pulverización y máxima eficiencia operativa.",
     images: ["/images/LogoRedes.png"],
