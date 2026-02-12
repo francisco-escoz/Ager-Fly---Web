@@ -59,7 +59,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/logo-redes.png",
+        url: "/images/LogoRedes.png",
         width: 1200,
         height: 630,
         alt: "AgerFly - Drones agrícolas profesionales",
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
     title: "AgerFly | CONDOR C80",
     description:
       "Dron agrícola profesional con tecnología avanzada de pulverización y máxima eficiencia operativa.",
-    images: ["/images/logo-redes.png"],
+    images: ["/images/LogoRedes.png"],
   },
 
 };
