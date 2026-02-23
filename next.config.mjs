@@ -3,18 +3,18 @@ const nextConfig = {
   async redirects() {
     return [
       {
-        source: '/:path*',
+        source: "/:path*",
         has: [
           {
-            type: 'host',
-            value: 'agerfly.com',
+            type: "host",
+            value: "agerfly.com",
           },
         ],
-        destination: 'https://www.agerfly.com/:path*',
+        destination: "https://www.agerfly.com/:path*",
         permanent: true,
       },
-    ]
+    ];
   },
-}
+};
 
-module.exports = nextConfig
+export default nextConfig;
