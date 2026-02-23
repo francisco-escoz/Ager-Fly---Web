@@ -82,9 +82,32 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Ager Fly",
+    url: "https://www.agerfly.com",
+    logo: "https://www.agerfly.com/images/LogoRedes.png",
+    sameAs: [
+      "https://www.instagram.com/ager.fly",
+      "https://www.linkedin.com/company/ager-fly",
+      "https://www.youtube.com/@AgerFly",
+      "https://x.com/ager_fly",
+      "https://www.facebook.com/share/1LuX5MKFwk",
+    ],
+  };
+
   return (
     <html lang="es">
-      <body>{children}</body>
+      <body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        {children}
+      </body>
     </html>
   );
 }
