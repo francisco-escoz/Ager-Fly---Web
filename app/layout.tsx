@@ -46,6 +46,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "192x192" },
     ],
   },
 
@@ -59,7 +60,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/LogoRedes.png",
+        url: "https://www.agerfly.com/images/LogoRedes.png",
         width: 1200,
         height: 630,
         alt: "Ager Fly - Drones agrícolas profesionales",
@@ -72,16 +73,15 @@ export const metadata: Metadata = {
     title: "Ager Fly | CÓNDOR C80",
     description:
       "Dron agrícola profesional con tecnología avanzada de pulverización y máxima eficiencia operativa.",
-    images: ["/images/LogoRedes.png"],
+    images: ["https://www.agerfly.com/images/LogoRedes.png"],
   },
-
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="es">
       <body>{children}</body>
