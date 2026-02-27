@@ -428,7 +428,7 @@ export default function Component() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Precisión LIDAR</span>
-                        <span className="text-white">±3.5 cm</span>
+                        <span className="text-white">±3,5 cm</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Compatibilidad con SATCOM</span>
@@ -580,7 +580,7 @@ export default function Component() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Capacidad</span>
-                        <span className="text-white">30,000 mAh</span>
+                        <span className="text-white">35.000 mAh</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Voltaje</span>
@@ -620,7 +620,7 @@ export default function Component() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Tiempo de Carga</span>
-                        <span className="text-white">25 min</span>
+                        <span className="text-white">11 min</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Intercambio en Caliente</span>
