@@ -19,10 +19,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
     },
     {
-      url: "https://www.agerfly.com/repuestos",
-      lastModified: new Date(),
-    },
-    {
       url: "https://www.agerfly.com/privacidad",
       lastModified: new Date(),
     },

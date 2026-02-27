@@ -45,7 +45,7 @@ export default function Nosotros() {
 
       <main className="flex-1">
         {/* Hero Section - Identidad Institucional */}
-        <section className="relative pt-32 pb-20 px-6 overflow-hidden border-b border-gray-800/50">
+        <section className="relative pt-14 pb-20 px-6 overflow-hidden border-b border-gray-800/50">
           <div className="container mx-auto relative z-10 text-center">
             <h2 className="text-4xl md:text-6xl font-extrabold text-white mb-6">
               Liderando la evolución del <br />
