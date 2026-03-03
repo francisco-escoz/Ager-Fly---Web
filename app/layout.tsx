@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import WhatsAppFloatMenu from "@/components/whatsapp-float-menu";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.agerfly.com"),
@@ -21,6 +22,7 @@ export const metadata: Metadata = {
     "CÓNDOR C80",
     "Ager Fly",
     "Argentina",
+    "Agerfly",
   ],
 
   authors: [{ name: "Ager Fly" }],
@@ -46,7 +48,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/images/icon.png", type: "image/png", sizes: "192x192" },
+      { url: "/images/icon.png", type: "image/png", sizes: "512x390" },
     ],
   },
 
@@ -106,7 +108,27 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema),
           }}
         />
+
         {children}
+
+        {/* 🔥 BOTÓN WHATSAPP GLOBAL */}
+        <WhatsAppFloatMenu
+          defaultMessage="Hola! Estoy en la web de Ager Fly y quiero hacer una consulta."
+          options={[
+            {
+              label: "Comercial",
+              phoneE164: "5491130183256",
+              message:
+                "Hola Ager Fly,\nQuisiera recibir información comercial sobre sus drones agrícolas.",
+            },
+            {
+              label: "Partner",
+              phoneE164: "5492474562583",
+              message:
+                "Hola Ager Fly!\nMe gustaría contactarlos para trabajar como revendedor, taller autorizado o partner.",
+            },
+          ]}
+        />
       </body>
     </html>
   );

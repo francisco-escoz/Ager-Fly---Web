@@ -29,7 +29,7 @@ export default function Nosotros() {
       nombre: "Ing. Leandro Paoli",
       rol: "Cofundador",
       puesto: "Diseño e integración",
-      foto: "/images/socios/lean.png",
+      foto: "/images/socios/leandro.png",
     },
     {
       nombre: "Ing. Ezequiel Portillo",
