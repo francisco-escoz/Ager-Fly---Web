@@ -106,7 +106,7 @@ export default function Contacto() {
                     <a
                       href={waLink(
                         WHATSAPP_COMERCIAL,
-                        "Hola Ager Fly\nEstoy interesado en recibir informacion comercial sobre sus drones agricolas."
+                        "Hola Ager Fly, me interesa conocer más sobre sus drones agrícolas y cómo pueden ayudar en mis cultivos. ¿Me podrían enviar información comercial?"
                       )}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -128,7 +128,7 @@ export default function Contacto() {
                       openEmailSmart(
                         "ventas@agerfly.com",
                         "Consulta comercial",
-                        "Hola Ager Fly,\n\nQuisiera recibir información comercial sobre sus drones agrícolas."
+                        "Hola Ager Fly, me interesa conocer más sobre sus drones agrícolas y cómo pueden ayudar en mis cultivos. ¿Me podrían enviar información comercial?"
                       )
                     }
                     className="text-base sm:text-lg font-medium text-white hover:text-blue-400 transition"
@@ -177,7 +177,7 @@ export default function Contacto() {
                     <a
                       href={waLink(
                         WHATSAPP_PARTNERS,
-                        "Hola Ager Fly!\nMe gustaría contactarlos para trabajar como revendedor, taller autorizado o partner."
+                        "¡Hola Ager Fly! Me gustaría recibir información para trabajar con ustedes como revendedor, taller o partner. ¿Me podrían dar más detalles?"
                       )}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -199,7 +199,7 @@ export default function Contacto() {
                       openEmailSmart(
                         "partners@agerfly.com",
                         "Alianza / Partner",
-                        "Hola Ager Fly,\n\nMe gustaría contactarlos para trabajar como partner o revendedor."
+                        "¡Hola Ager Fly! Me gustaría recibir información para trabajar con ustedes como revendedor, taller o partner. ¿Me podrían dar más detalles?"
                       )
                     }
                     className="text-base sm:text-lg font-medium text-white hover:text-green-400 transition"
