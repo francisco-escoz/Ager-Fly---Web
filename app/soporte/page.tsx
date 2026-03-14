@@ -4,6 +4,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
+export const metadata = {
+  title: 'Soporte y Capacitación | Ager Fly',
+  description: 'Ofrecemos servicio técnico especializado, mantenimiento preventivo y programas de capacitación para operadores de drones agrícolas en Argentina.',
+};
+
 export default function Soporte() {
   return (
     <div className="flex min-h-screen flex-col bg-[#050a18] text-white">

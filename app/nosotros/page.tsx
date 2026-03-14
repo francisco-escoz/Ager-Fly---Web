@@ -5,6 +5,15 @@ import SiteHeader from "@/components/ui/site-header";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
 
+
+
+export const metadata = {
+  title: 'Nosotros | Ager Fly - Tecnología AgTech Argentina',
+  description: 'Conocé al equipo de ingenieros detrás de Ager Fly. Somos pioneros en el desarrollo de drones agrícolas modulares, diseñados para potenciar el campo argentino.',
+};
+
+
+
 export default function Nosotros() {
   const equipo = [
     {

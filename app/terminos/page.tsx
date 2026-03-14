@@ -1,6 +1,12 @@
 import SiteHeader from "@/components/ui/site-header";
 import Footer from "@/components/ui/footer";
 
+export const metadata = {
+  title: 'Términos y Condiciones | Ager Fly',
+  description: 'Términos de uso, condiciones de servicio y responsabilidades legales para el uso de la plataforma y productos de Ager Fly.',
+  robots: { index: true, follow: true }
+};
+
 export default function Terminos() {
   return (
     <main className="min-h-screen bg-[#020617] text-white">

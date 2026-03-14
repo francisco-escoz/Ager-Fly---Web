@@ -1,6 +1,12 @@
 import SiteHeader from "@/components/ui/site-header";
 import Footer from "@/components/ui/footer";
 
+export const metadata = {
+  title: 'Política de Privacidad | Ager Fly',
+  description: 'Información detallada sobre el tratamiento de datos personales y la protección de la privacidad de nuestros usuarios y clientes.',
+  robots: { index: true, follow: true } // Queremos que Google sepa que existe
+};
+
 export default function Privacidad() {
   return (
     <main className="min-h-screen bg-[#020617] text-white">
