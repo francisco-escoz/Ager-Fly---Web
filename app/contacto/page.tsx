@@ -5,11 +5,6 @@ import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
 
 
-export const metadata = {
-  title: 'Contacto | Ager Fly - Cotizaciones y Alianzas',
-  description: 'Ponete en contacto con el equipo comercial de Ager Fly. Consultá por cotizaciones de drones agrícolas, servicio técnico o alianzas estratégicas.',
-};
-
 const WHATSAPP_COMERCIAL = "5491130183256";
 const WHATSAPP_PARTNERS = "5492474562583";
 
