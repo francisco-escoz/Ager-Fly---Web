@@ -21,6 +21,7 @@ export const metadata: Metadata = {
     "drones para el agro",
     "CÓNDOR C80",
     "Ager Fly",
+    "Dron Argentino",
     "Argentina",
     "Agerfly",
   ],
