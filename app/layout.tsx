@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   publisher: "Ager Fly",
 
   alternates: {
-    canonical: "https://www.agerfly.com/",
+    canonical: "https://www.agerfly.com",
   },
 
   robots: {
@@ -48,13 +48,15 @@ export const metadata: Metadata = {
 
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
 
   openGraph: {
     title: "Ager Fly | CÓNDOR C80",
     description:
       "Dron agrícola de alto rendimiento con sistema de pulverización avanzada, máxima eficiencia y tecnología de vuelo inteligente.",
-    url: "https://www.agerfly.com/",
+    url: "https://www.agerfly.com",
     siteName: "Ager Fly",
     locale: "es_AR",
     type: "website",
@@ -109,7 +111,6 @@ export default function RootLayout({
 
         {children}
 
-        {/* 🔥 BOTÓN WHATSAPP GLOBAL */}
         <WhatsAppFloatMenu
           defaultMessage="Hola! Estoy en la web de Ager Fly y quiero hacer una consulta."
           options={[
