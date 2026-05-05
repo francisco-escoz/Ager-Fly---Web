@@ -1,6 +1,59 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import WhatsAppFloatMenu from "@/components/whatsapp-float-menu";
+import localFont from "next/font/local";
+
+// 🔤 Fuente local
+const asenPro = localFont({
+  src: [
+    {
+      path: "../public/fonts/WOFF/AsenPro-Thin.woff",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-ExtraLight.woff",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-Light.woff",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-Regular.woff",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-Medium.woff",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-Semibold.woff",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-Bold.woff",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-ExtraBold.woff",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/WOFF/AsenPro-Black.woff",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-asen-pro",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.agerfly.com"),
@@ -46,11 +99,20 @@ export const metadata: Metadata = {
     },
   },
 
-  icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon.ico",
-    apple: "/favicon.ico",
-  },
+icons: {
+  icon: [
+    { url: "/favicon.ico", type: "image/x-icon" },
+    { url: "/favicon.svg", type: "image/svg+xml" },
+    { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+    { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+    { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" },
+  ],
+  shortcut: "/favicon.ico",
+  apple: [
+    { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+  ],
+},
+manifest: "/site.webmanifest",
 
   openGraph: {
     title: "Ager Fly | CÓNDOR C80",
@@ -101,7 +163,7 @@ export default function RootLayout({
 
   return (
     <html lang="es">
-      <body>
+      <body className={asenPro.className}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
