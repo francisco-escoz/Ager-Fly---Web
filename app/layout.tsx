@@ -56,9 +56,45 @@ const asenPro = localFont({
 });
 
 
-export const pinyon = localFont({
-  src: "../public/fonts/Pinyon_Script/PinyonScript-Regular.ttf",
-  variable: "--font-pinyon",
+export const oxanium = localFont({
+  src: [
+    {
+      path: "../public/fonts/Oxanium/static/Oxanium-ExtraLight.ttf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Oxanium/static/Oxanium-Light.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Oxanium/static/Oxanium-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Oxanium/static/Oxanium-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Oxanium/static/Oxanium-SemiBold.ttf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Oxanium/static/Oxanium-Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Oxanium/static/Oxanium-ExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-oxanium",
 });
 
 export const metadata: Metadata = {
