@@ -55,6 +55,12 @@ const asenPro = localFont({
   variable: "--font-asen-pro",
 });
 
+
+export const pinyon = localFont({
+  src: "../public/fonts/Pinyon_Script/PinyonScript-Regular.ttf",
+  variable: "--font-pinyon",
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.agerfly.com"),
 

@@ -46,7 +46,7 @@ export default function Component() {
         <div className="relative z-10 h-full w-full text-white">
           {/* TÍTULO */}
           <div className="absolute top-[12%] left-1/2 -translate-x-1/2 text-center px-4 w-full">
-            <h1 className="font-asen whitespace-nowrap font-Semibold tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
+            <h1 className="font-asen whitespace-nowrap font-extralight tracking-tight text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl">
               CÓNDOR C80
             </h1>
           </div>
