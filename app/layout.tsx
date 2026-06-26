@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import WhatsAppFloatMenu from "@/components/whatsapp-float-menu";
 import localFont from "next/font/local";
+import SiteHeader from "@/components/ui/site-header";
 
 // 🔤 Fuente local
 const asenPro = localFont({
@@ -141,20 +142,20 @@ export const metadata: Metadata = {
     },
   },
 
-icons: {
-  icon: [
-    { url: "/favicon.ico", type: "image/x-icon" },
-    { url: "/favicon.svg", type: "image/svg+xml" },
-    { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
-    { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
-    { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" },
-  ],
-  shortcut: "/favicon.ico",
-  apple: [
-    { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
-  ],
-},
-manifest: "/site.webmanifest",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", type: "image/x-icon" },
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon-96x96.png", sizes: "96x96", type: "image/png" },
+      { url: "/web-app-manifest-192x192.png", sizes: "192x192", type: "image/png" },
+      { url: "/web-app-manifest-512x512.png", sizes: "512x512", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+  },
+  manifest: "/site.webmanifest",
 
   openGraph: {
     title: "Ager Fly | CÓNDOR C80",
@@ -212,7 +213,7 @@ export default function RootLayout({
             __html: JSON.stringify(organizationSchema),
           }}
         />
-
+          <SiteHeader />
         {children}
 
         <WhatsAppFloatMenu

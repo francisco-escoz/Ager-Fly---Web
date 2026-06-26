@@ -1,6 +1,5 @@
 "use client";
 
-import SiteHeader from "@/components/ui/site-header";
 import Footer from "@/components/ui/footer";
 import { Button } from "@/components/ui/button";
 
@@ -51,7 +50,6 @@ function openEmailSmart(to: string, subject = "", body = "") {
 export default function Contacto() {
   return (
     <div className="flex min-h-screen flex-col bg-[#050a18]">
-      <SiteHeader />
 
       <main className="flex-1 bg-gradient-to-b from-[#050914] to-[#020617] text-white pt-24">
         {/* HEADER */}

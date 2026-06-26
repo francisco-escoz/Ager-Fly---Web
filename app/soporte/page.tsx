@@ -12,7 +12,6 @@ export const metadata = {
 export default function Soporte() {
   return (
     <div className="flex min-h-screen flex-col bg-[#050a18] text-white">
-      <SiteHeader />
 
       <main className="flex-1">
         {/* ================= HERO ================= */}

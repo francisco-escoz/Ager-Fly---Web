@@ -2,7 +2,14 @@
 
 import { useEffect, useMemo, useState } from "react";
 import Image from "next/image";
-import { Minus, Plus, ShoppingCart, Trash2 } from "lucide-react";
+import {
+  Minus,
+  Plus,
+  ShoppingCart,
+  Trash2,
+  Wrench,
+  PackageCheck,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Dialog,
@@ -14,18 +21,19 @@ import {
 
 type CategoriaId =
   | "todos"
-  | "modulo"
   | "estructura"
+  | "propulsion"
   | "electronica"
-  | "bateria"
-  | "helices"
-  | "motores";
+  | "pulverizacion"
+  | "bateria";
 
-type Producto = {
+type Kit = {
   id: string;
   categoria: Exclude<CategoriaId, "todos">;
   nombre: string;
   descripcion: string;
+  problema: string;
+  incluye: string[];
   precio: number;
   moneda: "USD";
   stock: boolean;
@@ -33,7 +41,7 @@ type Producto = {
 };
 
 type ItemCarrito = {
-  producto: Producto;
+  producto: Kit;
   cantidad: number;
 };
 
@@ -42,98 +50,125 @@ const STORAGE_KEY = "agerfly-carrito";
 
 const categorias: { id: CategoriaId; nombre: string }[] = [
   { id: "todos", nombre: "Todos" },
-  { id: "modulo", nombre: "Módulo" },
   { id: "estructura", nombre: "Estructura" },
+  { id: "propulsion", nombre: "Propulsión" },
   { id: "electronica", nombre: "Electrónica" },
+  { id: "pulverizacion", nombre: "Pulverización" },
   { id: "bateria", nombre: "Batería" },
-  { id: "helices", nombre: "Hélices" },
-  { id: "motores", nombre: "Motores" },
 ];
 
-const productos: Producto[] = [
+const kits: Kit[] = [
   {
-    id: "modulo-principal",
-    categoria: "modulo",
-    nombre: "Módulo principal",
-    descripcion:
-      "Unidad modular central para integración de componentes principales del Cóndor C80.",
-    precio: 850,
-    moneda: "USD",
-    stock: true,
-    imagenes: [
-      "/images/repuestos/placeholder-1.png",
-      "/images/repuestos/placeholder-2.png",
-      "/images/repuestos/placeholder-3.png",
-    ],
-  },
-  {
-    id: "brazo-estructural",
+    id: "kit-reparacion-brazo",
     categoria: "estructura",
-    nombre: "Brazo estructural",
+    nombre: "Kit de reparación de brazo",
     descripcion:
-      "Brazo de reemplazo para estructura principal, diseñado para alta resistencia y bajo peso.",
-    precio: 320,
+      "Kit completo para reparar el conjunto de brazo ante rotura estructural o daño por impacto.",
+    problema:
+      "Pensado para casos donde se rompe un brazo o queda comprometido el conjunto de propulsión asociado.",
+    incluye: [
+      "Brazo estructural",
+      "Motor principal",
+      "ESC",
+      "Hélice",
+      "Clip de fijación",
+      "Quiebre / unión estructural",
+      "Bulones y fijaciones",
+      "Herramientas necesarias para montaje",
+    ],
+    precio: 1450,
     moneda: "USD",
     stock: true,
     imagenes: [
-      "/images/repuestos/placeholder-1.png",
-      "/images/repuestos/placeholder-2.png",
+      "/images/kits/placeholder-1.png",
+      "/images/kits/placeholder-2.png",
+      "/images/kits/placeholder-3.png",
     ],
   },
   {
-    id: "autopiloto",
+    id: "kit-reparacion-motor",
+    categoria: "propulsion",
+    nombre: "Kit de reparación de motor",
+    descripcion:
+      "Conjunto de repuestos para reemplazo o reparación del sistema de propulsión.",
+    problema:
+      "Ideal cuando el motor sufrió daño, pérdida de rendimiento o falla asociada al conjunto motor-hélice.",
+    incluye: [
+      "Motor principal",
+      "Base de motor",
+      "Hélice CW/CCW según configuración",
+      "Bulones",
+      "Conectores",
+      "Herramientas básicas de ajuste",
+    ],
+    precio: 920,
+    moneda: "USD",
+    stock: true,
+    imagenes: ["/images/kits/placeholder-1.png", "/images/kits/placeholder-2.png"],
+  },
+  {
+    id: "kit-reparacion-electronica",
     categoria: "electronica",
-    nombre: "Autopiloto",
+    nombre: "Kit de reparación electrónica",
     descripcion:
-      "Controlador de vuelo para gestión de navegación, estabilidad y operación autónoma.",
-    precio: 1250,
+      "Kit orientado a diagnóstico y reemplazo de componentes electrónicos críticos.",
+    problema:
+      "Pensado para fallas de control, comunicación, potencia o conexiones internas.",
+    incluye: [
+      "ESC",
+      "Cableado interno",
+      "Conectores",
+      "Distribuidor de potencia",
+      "Fusibles / protecciones",
+      "Herramientas de diagnóstico básico",
+    ],
+    precio: 1180,
     moneda: "USD",
     stock: true,
-    imagenes: [
-      "/images/repuestos/placeholder-1.png",
-      "/images/repuestos/placeholder-2.png",
-    ],
+    imagenes: ["/images/kits/placeholder-1.png", "/images/kits/placeholder-2.png"],
   },
   {
-    id: "bateria-principal",
+    id: "kit-reparacion-pulverizacion",
+    categoria: "pulverizacion",
+    nombre: "Kit de reparación de pulverización",
+    descripcion:
+      "Kit para mantenimiento o reparación del sistema de aplicación del producto.",
+    problema:
+      "Recomendado ante obstrucciones, daños en aspersores, mangueras o fallas en el circuito de pulverización.",
+    incluye: [
+      "Aspersor",
+      "Mangueras",
+      "Filtros",
+      "Conectores",
+      "Abrazaderas",
+      "Sellos",
+      "Herramientas de limpieza y montaje",
+    ],
+    precio: 690,
+    moneda: "USD",
+    stock: true,
+    imagenes: ["/images/kits/placeholder-1.png", "/images/kits/placeholder-2.png"],
+  },
+  {
+    id: "kit-reparacion-bateria",
     categoria: "bateria",
-    nombre: "Batería principal",
+    nombre: "Kit de conexión de batería",
     descripcion:
-      "Batería de alta capacidad para operación del sistema de propulsión y electrónica.",
-    precio: 980,
+      "Kit para reparación o reemplazo de componentes asociados a la conexión de energía.",
+    problema:
+      "Pensado para daños en conectores, soportes, cableado de potencia o fijaciones de batería.",
+    incluye: [
+      "Conector de batería",
+      "Cableado de potencia",
+      "Soporte de batería",
+      "Bulones",
+      "Fijaciones",
+      "Herramientas de montaje",
+    ],
+    precio: 540,
     moneda: "USD",
     stock: true,
-    imagenes: [
-      "/images/repuestos/placeholder-1.png",
-      "/images/repuestos/placeholder-2.png",
-    ],
-  },
-  {
-    id: "helice-cw",
-    categoria: "helices",
-    nombre: "Hélice CW",
-    descripcion: "Hélice de giro horario para sistema de propulsión principal.",
-    precio: 95,
-    moneda: "USD",
-    stock: true,
-    imagenes: [
-      "/images/repuestos/placeholder-1.png",
-      "/images/repuestos/placeholder-2.png",
-    ],
-  },
-  {
-    id: "motor-principal",
-    categoria: "motores",
-    nombre: "Motor principal",
-    descripcion:
-      "Motor brushless de alto rendimiento para aplicaciones agrícolas de carga pesada.",
-    precio: 640,
-    moneda: "USD",
-    stock: true,
-    imagenes: [
-      "/images/repuestos/placeholder-1.png",
-      "/images/repuestos/placeholder-2.png",
-    ],
+    imagenes: ["/images/kits/placeholder-1.png", "/images/kits/placeholder-2.png"],
   },
 ];
 
@@ -141,19 +176,17 @@ function formatearPrecio(valor: number) {
   return `USD ${valor.toLocaleString("es-AR")}`;
 }
 
-export default function RepuestosPage() {
+export default function KitReparacionPage() {
   const [categoriaActiva, setCategoriaActiva] =
     useState<CategoriaId>("todos");
 
   const [carrito, setCarrito] = useState<ItemCarrito[]>([]);
   const [carritoCargado, setCarritoCargado] = useState(false);
-
   const [imagenesActivas, setImagenesActivas] = useState<Record<string, number>>(
     {}
   );
 
-  const [productoSeleccionado, setProductoSeleccionado] =
-    useState<Producto | null>(null);
+  const [kitSeleccionado, setKitSeleccionado] = useState<Kit | null>(null);
 
   useEffect(() => {
     const guardado = localStorage.getItem(STORAGE_KEY);
@@ -174,9 +207,9 @@ export default function RepuestosPage() {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(carrito));
   }, [carrito, carritoCargado]);
 
-  const productosFiltrados = useMemo(() => {
-    if (categoriaActiva === "todos") return productos;
-    return productos.filter((p) => p.categoria === categoriaActiva);
+  const kitsFiltrados = useMemo(() => {
+    if (categoriaActiva === "todos") return kits;
+    return kits.filter((kit) => kit.categoria === categoriaActiva);
   }, [categoriaActiva]);
 
   const total = carrito.reduce(
@@ -186,7 +219,7 @@ export default function RepuestosPage() {
 
   const cantidadTotal = carrito.reduce((acc, item) => acc + item.cantidad, 0);
 
-  function agregarAlCarrito(producto: Producto) {
+  function agregarAlCarrito(producto: Kit) {
     setCarrito((actual) => {
       const existe = actual.find((item) => item.producto.id === producto.id);
 
@@ -267,19 +300,45 @@ Total estimado: ${formatearPrecio(total)}
       <section className="border-b border-white/10 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.22),_transparent_45%)]">
         <div className="container mx-auto px-4 py-20">
           <p className="mb-4 text-sm uppercase tracking-[0.35em] text-blue-400">
-            Repuestos oficiales
+            Kits de reparación
           </p>
 
           <div className="grid gap-8 lg:grid-cols-[1fr_360px] lg:items-end">
             <div>
               <h1 className="max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
-                Componentes y repuestos para Cóndor C80
+                Soluciones completas para reparar fallas específicas
               </h1>
 
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-                Seleccioná una categoría, revisá los productos disponibles y
-                armá tu solicitud de cotización con cantidades.
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
+                A diferencia de los repuestos individuales, los kits de
+                reparación reúnen los componentes y herramientas necesarios para
+                resolver un problema puntual del dron.
               </p>
+
+              <div className="mt-8 grid gap-4 md:grid-cols-2">
+                <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+                  <Wrench className="mb-4 h-7 w-7 text-blue-400" />
+                  <h2 className="text-lg font-semibold">
+                    Reparación por problema
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    Por ejemplo, si se rompe un brazo, el kit puede incluir
+                    brazo, motor, ESC, hélice, clip, quiebre, bulones y
+                    herramientas necesarias.
+                  </p>
+                </div>
+
+                <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-5">
+                  <PackageCheck className="mb-4 h-7 w-7 text-blue-400" />
+                  <h2 className="text-lg font-semibold">
+                    Todo en una sola solicitud
+                  </h2>
+                  <p className="mt-2 text-sm leading-6 text-slate-400">
+                    Evitá comprar pieza por pieza y asegurá que el cliente
+                    reciba todo lo necesario para la reparación en campo.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="rounded-3xl border border-blue-500/20 bg-white/[0.04] p-6 shadow-2xl shadow-blue-950/30 backdrop-blur">
@@ -327,51 +386,49 @@ Total estimado: ${formatearPrecio(total)}
 
         <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_380px]">
           <div>
-            <div className="mb-8 flex items-end justify-between gap-4">
-              <div>
-                <h2 className="text-3xl font-semibold md:text-4xl">
-                  {categorias.find((c) => c.id === categoriaActiva)?.nombre}
-                </h2>
+            <div className="mb-8">
+              <h2 className="text-3xl font-semibold md:text-4xl">
+                {categorias.find((c) => c.id === categoriaActiva)?.nombre}
+              </h2>
 
-                <p className="mt-2 text-slate-400">
-                  {productosFiltrados.length} repuesto
-                  {productosFiltrados.length === 1 ? "" : "s"} disponible
-                  {productosFiltrados.length === 1 ? "" : "s"}
-                </p>
-              </div>
+              <p className="mt-2 text-slate-400">
+                {kitsFiltrados.length} kit
+                {kitsFiltrados.length === 1 ? "" : "s"} disponible
+                {kitsFiltrados.length === 1 ? "" : "s"}
+              </p>
             </div>
 
             <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-              {productosFiltrados.map((producto) => {
-                const imagenActiva = imagenesActivas[producto.id] ?? 0;
+              {kitsFiltrados.map((kit) => {
+                const imagenActiva = imagenesActivas[kit.id] ?? 0;
 
                 return (
                   <article
-                    key={producto.id}
-                    onClick={() => setProductoSeleccionado(producto)}
+                    key={kit.id}
+                    onClick={() => setKitSeleccionado(kit)}
                     className="group cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-white/[0.035] shadow-xl shadow-black/20 transition hover:-translate-y-1 hover:border-blue-500/50"
                   >
                     <div className="relative h-64 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950">
                       <Image
-                        src={producto.imagenes[imagenActiva]}
-                        alt={producto.nombre}
+                        src={kit.imagenes[imagenActiva]}
+                        alt={kit.nombre}
                         fill
                         className="object-contain p-8 transition duration-300 group-hover:scale-105"
                       />
 
                       <div className="absolute left-4 top-4 rounded-full border border-green-400/30 bg-green-500/10 px-3 py-1 text-xs text-green-300">
-                        {producto.stock ? "Disponible" : "Sin stock"}
+                        {kit.stock ? "Disponible" : "Sin stock"}
                       </div>
                     </div>
 
                     <div className="border-t border-white/10 p-5">
                       <div className="mb-4 flex gap-2">
-                        {producto.imagenes.map((_, index) => (
+                        {kit.imagenes.map((_, index) => (
                           <button
                             key={index}
                             onClick={(e) => {
                               e.stopPropagation();
-                              cambiarImagen(producto.id, index);
+                              cambiarImagen(kit.id, index);
                             }}
                             className={`h-2.5 rounded-full transition-all ${
                               imagenActiva === index
@@ -383,17 +440,24 @@ Total estimado: ${formatearPrecio(total)}
                         ))}
                       </div>
 
-                      <h3 className="text-xl font-semibold">
-                        {producto.nombre}
-                      </h3>
+                      <h3 className="text-xl font-semibold">{kit.nombre}</h3>
 
-                      <p className="mt-3 line-clamp-3 min-h-20 text-sm leading-6 text-slate-400">
-                        {producto.descripcion}
+                      <p className="mt-3 line-clamp-3 text-sm leading-6 text-slate-400">
+                        {kit.descripcion}
                       </p>
+
+                      <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4">
+                        <p className="text-sm font-medium text-blue-300">
+                          Problema que resuelve
+                        </p>
+                        <p className="mt-2 line-clamp-2 text-sm leading-6 text-slate-400">
+                          {kit.problema}
+                        </p>
+                      </div>
 
                       <div className="mt-5">
                         <p className="text-2xl font-semibold">
-                          {formatearPrecio(producto.precio)}
+                          {formatearPrecio(kit.precio)}
                         </p>
                       </div>
 
@@ -402,7 +466,7 @@ Total estimado: ${formatearPrecio(total)}
                           variant="outline"
                           onClick={(e) => {
                             e.stopPropagation();
-                            setProductoSeleccionado(producto);
+                            setKitSeleccionado(kit);
                           }}
                           className="flex-1 border-white/10 bg-transparent text-white hover:bg-white/10"
                         >
@@ -412,7 +476,7 @@ Total estimado: ${formatearPrecio(total)}
                         <Button
                           onClick={(e) => {
                             e.stopPropagation();
-                            agregarAlCarrito(producto);
+                            agregarAlCarrito(kit);
                           }}
                           className="flex-1 bg-blue-600 hover:bg-blue-500"
                         >
@@ -442,7 +506,7 @@ Total estimado: ${formatearPrecio(total)}
               <div className="rounded-2xl border border-dashed border-white/15 p-6 text-center">
                 <p className="text-slate-300">Tu carrito está vacío.</p>
                 <p className="mt-2 text-sm text-slate-500">
-                  Agregá repuestos o kits para armar tu solicitud.
+                  Agregá kits o repuestos para armar tu solicitud.
                 </p>
               </div>
             ) : (
@@ -527,45 +591,42 @@ Total estimado: ${formatearPrecio(total)}
       </section>
 
       <Dialog
-        open={!!productoSeleccionado}
+        open={!!kitSeleccionado}
         onOpenChange={(open) => {
-          if (!open) setProductoSeleccionado(null);
+          if (!open) setKitSeleccionado(null);
         }}
       >
         <DialogContent className="max-h-[90vh] max-w-6xl overflow-y-auto border-white/10 bg-[#050a18] text-white">
-          {productoSeleccionado && (
+          {kitSeleccionado && (
             <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
               <div>
                 <div className="relative h-[320px] overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-950 md:h-[480px]">
                   <Image
                     src={
-                      productoSeleccionado.imagenes[
-                        imagenesActivas[productoSeleccionado.id] ?? 0
+                      kitSeleccionado.imagenes[
+                        imagenesActivas[kitSeleccionado.id] ?? 0
                       ]
                     }
-                    alt={productoSeleccionado.nombre}
+                    alt={kitSeleccionado.nombre}
                     fill
                     className="object-contain p-8 md:p-12"
                   />
                 </div>
 
                 <div className="mt-4 flex gap-3 overflow-x-auto pb-1">
-                  {productoSeleccionado.imagenes.map((imagen, index) => (
+                  {kitSeleccionado.imagenes.map((imagen, index) => (
                     <button
                       key={imagen}
-                      onClick={() =>
-                        cambiarImagen(productoSeleccionado.id, index)
-                      }
+                      onClick={() => cambiarImagen(kitSeleccionado.id, index)}
                       className={`relative h-20 w-24 shrink-0 overflow-hidden rounded-2xl border bg-slate-900 ${
-                        (imagenesActivas[productoSeleccionado.id] ?? 0) ===
-                        index
+                        (imagenesActivas[kitSeleccionado.id] ?? 0) === index
                           ? "border-blue-500"
                           : "border-white/10"
                       }`}
                     >
                       <Image
                         src={imagen}
-                        alt={`${productoSeleccionado.nombre} ${index + 1}`}
+                        alt={`${kitSeleccionado.nombre} ${index + 1}`}
                         fill
                         className="object-contain p-2"
                       />
@@ -577,47 +638,42 @@ Total estimado: ${formatearPrecio(total)}
               <div>
                 <DialogHeader>
                   <p className="text-sm uppercase tracking-[0.3em] text-blue-400">
-                    Repuesto oficial
+                    Kit de reparación
                   </p>
 
                   <DialogTitle className="text-3xl font-semibold md:text-4xl">
-                    {productoSeleccionado.nombre}
+                    {kitSeleccionado.nombre}
                   </DialogTitle>
 
                   <DialogDescription className="text-base leading-7 text-slate-400">
-                    {productoSeleccionado.descripcion}
+                    {kitSeleccionado.descripcion}
                   </DialogDescription>
                 </DialogHeader>
 
                 <div className="mt-6 rounded-3xl border border-blue-500/20 bg-blue-500/5 p-5">
                   <p className="text-sm font-medium text-blue-300">
-                    Información del producto
+                    Problema que resuelve
                   </p>
-
                   <p className="mt-2 text-sm leading-6 text-slate-300">
-                    Repuesto individual para mantenimiento, reemplazo o
-                    reparación puntual del Cóndor C80. Si necesitás resolver una
-                    falla completa, también podés revisar los kits de reparación.
+                    {kitSeleccionado.problema}
                   </p>
                 </div>
 
-                <div className="mt-6 grid gap-3 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                    <p className="text-sm text-slate-400">Categoría</p>
-                    <p className="mt-1 font-medium text-white">
-                      {
-                        categorias.find(
-                          (categoria) =>
-                            categoria.id === productoSeleccionado.categoria
-                        )?.nombre
-                      }
-                    </p>
-                  </div>
+                <div className="mt-6">
+                  <p className="mb-3 text-sm font-medium uppercase tracking-widest text-slate-400">
+                    Incluye
+                  </p>
 
-                  <div className="rounded-2xl border border-white/10 bg-white/[0.03] p-4">
-                    <p className="text-sm text-slate-400">Compatibilidad</p>
-                    <p className="mt-1 font-medium text-white">Cóndor C80</p>
-                  </div>
+                  <ul className="grid gap-2 text-sm text-slate-300 sm:grid-cols-2">
+                    {kitSeleccionado.incluye.map((item) => (
+                      <li
+                        key={item}
+                        className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2"
+                      >
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 <div className="mt-8 rounded-3xl border border-white/10 bg-white/[0.04] p-5">
@@ -625,17 +681,17 @@ Total estimado: ${formatearPrecio(total)}
                     <div>
                       <p className="text-sm text-slate-400">Precio estimado</p>
                       <p className="text-4xl font-semibold">
-                        {formatearPrecio(productoSeleccionado.precio)}
+                        {formatearPrecio(kitSeleccionado.precio)}
                       </p>
                     </div>
 
                     <div className="rounded-full border border-green-400/30 bg-green-500/10 px-3 py-1 text-xs text-green-300">
-                      {productoSeleccionado.stock ? "Disponible" : "Sin stock"}
+                      {kitSeleccionado.stock ? "Disponible" : "Sin stock"}
                     </div>
                   </div>
 
                   <Button
-                    onClick={() => agregarAlCarrito(productoSeleccionado)}
+                    onClick={() => agregarAlCarrito(kitSeleccionado)}
                     className="mt-5 w-full bg-blue-600 hover:bg-blue-500"
                   >
                     Agregar al carrito

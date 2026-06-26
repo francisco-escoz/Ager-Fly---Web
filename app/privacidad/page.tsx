@@ -10,7 +10,6 @@ export const metadata = {
 export default function Privacidad() {
   return (
     <main className="min-h-screen bg-[#020617] text-white">
-      <SiteHeader />
 
       <section className="px-6 pt-14 pb-24">
         <div className="max-w-4xl mx-auto">

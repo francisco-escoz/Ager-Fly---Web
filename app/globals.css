@@ -10,7 +10,7 @@
   font-family: var(--font-asen-pro);
 }
 
-header{
+header {
   /* background-color: rgb(15, 23, 42); */
   /* background-color: rgb(15, 23, 42); */
   background-color: rgba(15, 23, 42, 0.755);
@@ -18,8 +18,10 @@ header{
 }
 
 .txt_especificacion {
-  font-size: 18px; /* o el tamaño que quieras */
-  font-weight: 500; /* opcional */
+  font-size: 18px;
+  /* o el tamaño que quieras */
+  font-weight: 500;
+  /* opcional */
   margin: 0 2%;
 }
 
@@ -69,6 +71,7 @@ header{
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
   .dark {
     --background: 0 0% 3.9%;
     --foreground: 0 0% 98%;
@@ -109,6 +112,7 @@ header{
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground;
   }
