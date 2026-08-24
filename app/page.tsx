@@ -536,7 +536,7 @@ export default function Component() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Rango de Detección</span>
-                        <span className="text-white">hasta 20km</span>
+                        <span className="text-white">Hasta 20km</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Resolución</span>
