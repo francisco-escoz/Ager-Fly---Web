@@ -476,7 +476,7 @@ export default function Component() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Aspersores</span>
-                        <span className="text-white">2 o 4 Centrífugos de 9L/min</span>
+                        <span className="text-white">2 o 4 Centrífugos de 9 L/min</span>
                       </div>
                     </div>
                   </CardContent>
@@ -536,7 +536,7 @@ export default function Component() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Rango de Detección</span>
-                        <span className="text-white">hasta 20km m</span>
+                        <span className="text-white">hasta 20km</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Resolución</span>
@@ -576,7 +576,7 @@ export default function Component() {
                     <div className="space-y-3 text-sm">
                       <div className="flex justify-between">
                         <span className="text-slate-400">Tipo</span>
-                        <span className="text-white">LiPo 14S</span>
+                        <span className="text-white">LiPo 18S</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Capacidad</span>

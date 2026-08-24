@@ -36,14 +36,14 @@ type NavLink =
 
 
 const links: NavLink[] = [
-  // {
-  //   label: "Productos",
-  //   children: [
-  //     { href: "/", label: "Cóndor C80" },
-  //     { href: "/repuestos", label: "Repuestos" },
-  //     { href: "/kit-reparacion", label: "Kit de reparación" },
-  //   ],
-  // },
+  {
+    label: "Productos",
+    children: [
+      { href: "/", label: "Cóndor C80" },
+      { href: "/repuestos", label: "Repuestos" },
+      { href: "/kit-reparacion", label: "Kit de reparación" },
+    ],
+  },
   { href: "/soporte", label: "Soporte" },
   { href: "/nosotros", label: "Nosotros" },
   { href: "/contacto", label: "Contacto" },
