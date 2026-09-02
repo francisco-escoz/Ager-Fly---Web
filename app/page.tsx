@@ -348,7 +348,7 @@ export default function Component() {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Desplegado</span>
-                        <span className="text-white">3 m × 3 m × 1,75 m</span>
+                        <span className="text-white">3 m × 3 m × 0,75 m</span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-slate-400">Peso en vacio</span>
