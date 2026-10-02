@@ -40,8 +40,8 @@ const links: NavLink[] = [
     label: "Productos",
     children: [
       { href: "/", label: "Cóndor C80" },
-      { href: "/repuestos", label: "Repuestos" },
-      { href: "/kit-reparacion", label: "Kit de reparación" },
+      // { href: "/repuestos", label: "Repuestos" },
+      // { href: "/kit-reparacion", label: "Kit de reparación" },
     ],
   },
   { href: "/soporte", label: "Soporte" },
