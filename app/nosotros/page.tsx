@@ -40,12 +40,6 @@ export default function Nosotros() {
       puesto: "Diseño e integración",
       foto: "/images/socios/leandro.png",
     },
-    {
-      nombre: "Ing. Ezequiel Portillo",
-      rol: "Cofundador",
-      puesto: "Instrumentación y periféricos",
-      foto: "/images/socios/ezequiel.png",
-    },
   ];
 
   return (
@@ -156,7 +150,7 @@ export default function Nosotros() {
                     <strong className="text-white">
                       Personalización del Hardware:
                     </strong>{" "}
-                    Sistema modular que permite adaptar el dron a distintas aplicaciones. 
+                    Sistema modular que permite adaptar el dron a distintas aplicaciones.
                     El cliente puede configurar accesorios y funciones según sus necesidades operativas.
                   </p>
                 </div>
@@ -212,7 +206,7 @@ export default function Nosotros() {
                 sm:grid-cols-2
                 md:grid-cols-3
                 lg:grid-cols-4
-                xl:grid-cols-5
+                xl:grid-cols-4
                 place-items-center
                 gap-x-6
                 gap-y-10
@@ -291,30 +285,30 @@ export default function Nosotros() {
         </section>
 
         {/* CTA Final */}
-<section className="py-20 md:py-24 bg-gradient-to-t from-blue-900/10 to-transparent">
-  <div className="container mx-auto px-6 text-center">
-    <div
-      className="
+        <section className="py-20 md:py-24 bg-gradient-to-t from-blue-900/10 to-transparent">
+          <div className="container mx-auto px-6 text-center">
+            <div
+              className="
         max-w-4xl mx-auto
         p-7 sm:p-10 md:p-12
         rounded-3xl sm:rounded-[3rem]
         border border-blue-500/20
         bg-[#0a1229]
       "
-    >
-      <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-white mb-5 sm:mb-6">
-        Unite a la nueva generación del agro.
-      </h2>
+            >
+              <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-white mb-5 sm:mb-6">
+                Unite a la nueva generación del agro.
+              </h2>
 
-      <p className="text-gray-400 mb-8 sm:mb-10 text-base sm:text-lg">
-        Nuestros ingenieros están listos para configurar tu próxima herramienta
-        de precisión.
-      </p>
+              <p className="text-gray-400 mb-8 sm:mb-10 text-base sm:text-lg">
+                Nuestros ingenieros están listos para configurar tu próxima herramienta
+                de precisión.
+              </p>
 
-      <Button
-        asChild
-        size="lg"
-        className="
+              <Button
+                asChild
+                size="lg"
+                className="
           w-full sm:w-auto
           bg-blue-600 hover:bg-blue-700
           text-white
@@ -328,14 +322,14 @@ export default function Nosotros() {
           shadow-[0_0_30px_rgba(59,130,246,0.3)]
           whitespace-normal
         "
-      >
-        <Link href="/contacto" className="block text-center">
-          Contactar con un especialista
-        </Link>
-      </Button>
-    </div>
-  </div>
-</section>
+              >
+                <Link href="/contacto" className="block text-center">
+                  Contactar con un especialista
+                </Link>
+              </Button>
+            </div>
+          </div>
+        </section>
 
       </main>
 
